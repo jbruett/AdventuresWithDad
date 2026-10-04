@@ -83,6 +83,16 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
     catches this quickly: look for "Missing or unsupported mandatory dependencies" in the log.
   - Optional client-side libraries only show up in the **client** log, e.g. "Model loader 'athena:athena' not found".
     Check client logs for `Model loader .* not found` after adding mods.
-- [x] Quests v1: Explorer badges, recipe gates, first-join quest book, and the Welcome (with JEI tutorial),
-  Builder's Corner, Explorer and Twilight Forest chapters (35 quests). Server loads cleanly. In-game test pending
-- Then: John's playthrough, which drives the balancing backlog in docs/PLAN.md and the tech chapters.
+- [x] Quests v1: Explorer badges (with JEI info pages), recipe gates, first-join quest book, and the Welcome
+  (with JEI tutorial + Controlling key search), Builder's Corner, Explorer and Twilight Forest chapters
+  (36 quests). Tested in-game: text, badges and gates work.
+- [x] Extras since: Controlling, Leaves Be Gone, MezzConfigGUI, JEI WorldGen (JER tried, removed). 109 mods.
+- [x] Metal check: every metal comes from exactly one mod, so no unification mod is needed.
+
+## Next session
+1. Start `packwiz serve` in the background (the quests3 dev instance syncs from it on launch).
+2. John's playthrough: collect balance issues into docs/PLAN.md's backlog, and outline the tech chapters
+   (Create → Ender IO/Laser IO/Ars → Mekanism/RS/JDT/Mining Gadgets → endgame) in docs/QUESTS.md.
+3. Open items: Create Deco placard recipe (KubeJS fix), optionally hide Create's crushed ores for metals not in
+   the pack (nickel, silver, aluminum, platinum, quicksilver), the LICENSE file still contains a stray
+   "Y-l2zLvm" line, and the README is still early notes.
