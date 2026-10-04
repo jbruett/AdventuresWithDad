@@ -36,6 +36,9 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
     packwiz-installer. John has accepted the EULA on this machine; a new machine needs `-AcceptEula` once. For
     automated runs, launch `java @user_jvm_args.txt @libraries/.../win_args.txt nogui` with redirected stdin and
     send `stop`; wrapping `run.bat` in `cmd /c` exits immediately.
+  - **Configs:** pack configs live in `config/` (included in the pack and used by both client and server). To change
+    a setting, copy the generated file from a Prism instance, edit only the needed lines, and keep everything else
+    at defaults so diffs stay readable. Then run `packwiz refresh`.
   - Prism instances (one per test batch): `%APPDATA%\PrismLauncher\instances\<name>\minecraft\logs\latest.log`.
     Read the log after each boot test. Expected noise: mixin "Error loading class" / refmap warnings for absent mods.
 - **KubeJS**: recipe, tag and loot balancing. **Configs / datapacks**: worldgen, spawns, difficulty.
@@ -53,5 +56,11 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
   - [x] Batch 2, building (plus tier-0 tools: Building/Charging Gadgets, FTB Ultimine, Connected Glass): boots
     cleanly. Baseline: game start 24.5s, world open 8.9s
   - [x] Batch 3, adventure: boots in singleplayer (start 31.4s, world 11.5s) and on the dedicated server (65 mods). Multiplayer join from Prism works
-  - [ ] Batch 4, tech/magic (also brings in Create's building add-ons: Create Deco, Copycats+, Rechiseled: Create)
+  - [x] Batch 4, tech/magic, plus Create Deco, Copycats+ and Rechiseled: Create: boots in singleplayer (start 32.0s,
+    world 15.6s) and on the dedicated server (98 mods). Athena added after the client log showed missing Ender IO
+    capacitor bank models; batch4b rechecked clean. Ars starter book disabled via config
+  - Some CF listings don't declare all dependencies (Ars Nouveau needs Curios and GeckoLib). A server boot test
+    catches this quickly: look for "Missing or unsupported mandatory dependencies" in the log.
+  - Optional client-side libraries only show up in the **client** log, e.g. "Model loader 'athena:athena' not found".
+    Check client logs for `Model loader .* not found` after adding mods.
 - Then work through the balancing backlog in docs/PLAN.md.

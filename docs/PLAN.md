@@ -129,7 +129,9 @@ boss drops give an optional **cheaper recipe or shortcut** for a tier, never the
 **Approach:** John does a full playthrough before the pack goes to his son. Balance issues found in that
 playthrough get added here. Items below are things to watch for, not changes to make blind.
 
-- [ ] Remove starter books (Ars tome, others) → single FTB Quests book on first join
+- [ ] Remove starter books → single FTB Quests book on first join
+  - [x] Ars Nouveau Tattered Tome: `spawnBook = false` in config/ars_nouveau-common.toml (the only mod that gave one at batch 4)
+  - [ ] Give the FTB Quests book on first join once quests exist
 - [ ] Ore-processing ladder: Create (~1.75x) → Ender IO (~2x) → Mekanism (3–5x); keep each tier worthwhile
 - [ ] Building Gadgets cheap and early (building is a core activity); gate Mining Gadgets to tier 3
 - [ ] Set server difficulty to Easy; review hostile spawn rates after first playtest
@@ -139,6 +141,8 @@ playthrough get added here. Items below are things to watch for, not changes to 
 - [ ] Villages: T&T and Repurposed Structures both add village variants. Consider turning off RS villages so T&T's are the ones you see
 - [ ] Mob difficulty / dungeon loot so day-one loot isn't late-game gear
 - [ ] Recipe conflicts (multiple mods' sawmills, crushers, furnaces) — unify via KubeJS + tags
+- [ ] Create Deco's `createdeco:placard` recipe fails to parse against Create 6.0.10. Fix with KubeJS or wait for an update
+- [ ] Ender IO's 1.21.1 builds are tagged beta (8.2.12-beta). Watch for bugs during the playthrough
 - [ ] Track client-only mods for the server pack (Sodium, IPN, Xaero's, etc.)
 - [ ] FTB Chunks: per-player claim/forceload limits sized for a home server
 
@@ -157,4 +161,6 @@ playthrough get added here. Items below are things to watch for, not changes to 
 - 2026-10-04: Batch 2 (building) added. Effortless Building removed (Building Gadgets stays). Create-dependent building add-ons wait for batch 4
 - 2026-10-04: Batch 3 (adventure) added. YUNG's taken from its NeoForge-specific CF listings. Boots; structure spacing looks OK
 - 2026-10-04: Dedicated server test passes (scripts/test-server.ps1). All CF mods allow automated downloads
+- 2026-10-04: Batch 4 (tech/magic) added; Curios + GeckoLib added for Ars Nouveau. Server boots with 97 mods
+- 2026-10-04: Batch 4 client boots. Athena added (Ender IO capacitor bank models need it)
 - 2026-10-04: Balancing happens through John's own playthrough before release, not up-front tuning
