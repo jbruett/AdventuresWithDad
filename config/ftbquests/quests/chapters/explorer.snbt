@@ -1,0 +1,109 @@
+{
+	autofocus_id: "30B648B18A345220"
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "explorer"
+	group: ""
+	icon: { id: "explorerscompass:explorerscompass" }
+	id: "7794C8F3D030AEE3"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "minecraft:oak_sapling" }
+			id: "30B648B18A345220"
+			rewards: [{ id: "2D776E38BA13C913", item: { count: 1, id: "naturescompass:naturescompass" }, type: "item" }]
+			tasks: [{ biome: "#minecraft:is_forest", id: "43F4CEBAF733071E", type: "biome" }, { biome: "#minecraft:is_mountain", id: "694D521495B04485", type: "biome" }, { biome: "#minecraft:is_beach", id: "2037320B1AE1C810", type: "biome" }]
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["30B648B18A345220"]
+			icon: { id: "minecraft:bell" }
+			id: "3BC54BDA630C9A12"
+			rewards: [{ count: 8, id: "264775AD5201B59D", item: { count: 1, id: "minecraft:emerald" }, type: "item" }]
+			tasks: [{ id: "30505100A4971C52", structure: "#towns_and_towers:town", type: "structure" }]
+			x: 3d
+			y: -2.25d
+		}
+		{
+			dependencies: ["30B648B18A345220"]
+			icon: { id: "minecraft:spawner" }
+			id: "7B5829C230694D09"
+			rewards: [{ id: "555363118603C9BE", item: { count: 1, id: "explorerscompass:explorerscompass" }, type: "item" }]
+			tasks: [{ id: "4D5FC6E1AE51FCCA", structure: "#betterdungeons:better_dungeons", type: "structure" }]
+			x: 3d
+			y: -0.75d
+		}
+		{
+			dependencies: ["30B648B18A345220"]
+			icon: { id: "minecraft:barrel" }
+			id: "719741E06CF69F1A"
+			rewards: [{ count: 8, id: "2936249B0F2FCFAB", item: { count: 1, id: "minecraft:cooked_beef" }, type: "item" }]
+			tasks: [{ id: "101D2AE8119FB6B2", structure: "#nova_structures:taverns", type: "structure" }]
+			x: 3d
+			y: 0.75d
+		}
+		{
+			dependencies: ["30B648B18A345220"]
+			icon: { id: "minecraft:rail" }
+			id: "16DAC029693288C3"
+			rewards: [{ count: 32, id: "0EC9EEBCEED6C8C7", item: { count: 1, id: "minecraft:torch" }, type: "item" }, { count: 16, id: "5A1674EB2D501F41", item: { count: 1, id: "minecraft:rail" }, type: "item" }]
+			tasks: [{ id: "103CC3626FF3A163", structure: "#bettermineshafts:better_mineshafts", type: "structure" }]
+			x: 3d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3BC54BDA630C9A12", "7B5829C230694D09", "719741E06CF69F1A", "16DAC029693288C3"]
+			icon: { id: "kubejs:bronze_explorer_badge" }
+			id: "3A05B3BAF1ECEF67"
+			min_required_dependencies: 3
+			rewards: [{ id: "1E353C7E20278AC9", item: { count: 1, id: "kubejs:bronze_explorer_badge" }, type: "item" }]
+			shape: "gear"
+			size: 2d
+			tasks: [{ id: "0CCC900956AE7D36", type: "checkmark" }]
+			x: 6d
+			y: 0d
+		}
+		{
+			dependencies: ["3A05B3BAF1ECEF67"]
+			icon: { id: "minecraft:netherrack" }
+			id: "12AEEB9094724BA5"
+			rewards: [{ count: 3, id: "15923EAD2B036FE7", item: { components: { "minecraft:potion_contents": { potion: "minecraft:long_fire_resistance" } }, count: 1, id: "minecraft:potion" }, type: "item" }]
+			tasks: [{ dimension: "minecraft:the_nether", id: "63F0523D050222FD", type: "dimension" }]
+			x: 9d
+			y: 0d
+		}
+		{
+			dependencies: ["12AEEB9094724BA5"]
+			icon: { id: "minecraft:nether_bricks" }
+			id: "3B40992B0B08F547"
+			rewards: [{ count: 4, id: "1FDD47E54754CB41", item: { count: 1, id: "minecraft:blaze_rod" }, type: "item" }]
+			tasks: [{ id: "023B426DE9B0B235", structure: "#awd:fortress_or_stronghold", type: "structure" }]
+			x: 11.5d
+			y: 0d
+		}
+		{
+			dependencies: ["12AEEB9094724BA5", "3B40992B0B08F547"]
+			icon: { id: "kubejs:silver_explorer_badge" }
+			id: "3DAD468E890550F4"
+			rewards: [{ id: "14A5A6B2B56A9BD2", item: { count: 1, id: "kubejs:silver_explorer_badge" }, type: "item" }]
+			shape: "gear"
+			size: 2d
+			tasks: [{ id: "5DEAF7795CBDB837", type: "checkmark" }]
+			x: 14d
+			y: 0d
+		}
+		{
+			dependencies: ["3DAD468E890550F4"]
+			icon: { id: "kubejs:gold_explorer_badge" }
+			id: "035EE7E525E0A2B4"
+			rewards: [{ id: "5A62EF8EC29AA496", item: { count: 1, id: "kubejs:gold_explorer_badge" }, type: "item" }]
+			shape: "gear"
+			size: 2d
+			tasks: [{ dimension: "minecraft:the_end", id: "06652A581444B62C", type: "dimension" }]
+			x: 17d
+			y: 0d
+		}
+	]
+}

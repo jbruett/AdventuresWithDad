@@ -5,6 +5,74 @@ file = "config/ars_nouveau-common.toml"
 hash = "b1a7e267eac38e5dab7a225798f854333eb45a405e1caee6e895af1cc51b006f"
 
 [[files]]
+file = "config/ftbquests/quests/chapter_groups.snbt"
+hash = "e57d8311aec9f524911ed1313cabf138bb7fa5a2d3ba985a00a2a267ff35ef78"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/builders_corner.snbt"
+hash = "c1118b46c71b73dde35e5df3aa732979a60eb7f5456e60cbc82adb2a51224c05"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/explorer.snbt"
+hash = "2edc51efccb0254526d89fa3f3b674102f67569eebe6e91d4f721d0cb9c357de"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/twilight_forest.snbt"
+hash = "7b139a8f12302d21c1dbb8b4c973fe3f26e30955b5e08de3b7f61693a8fd29f5"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/welcome.snbt"
+hash = "eb77d5aa770a9b183a63b29686424539056aba286aa7de59d03687a822ac713b"
+
+[[files]]
+file = "config/ftbquests/quests/data.snbt"
+hash = "a156611053614a4edef46d72919109453bb5f22e06b1773086c564d0f224d732"
+
+[[files]]
+file = "config/ftbquests/quests/lang/en_us.snbt"
+hash = "c3e7e370189333de48d1cac3fd3da8a50564a991d1b78ef4117d3808ffd6ac63"
+
+[[files]]
+file = "kubejs/assets/kubejs/lang/en_us.json"
+hash = "0f1814d1c1bf48f842b18967c13be6aacfeb6a1008a1ee844f702ce9550c8f7a"
+
+[[files]]
+file = "kubejs/assets/kubejs/textures/item/bronze_explorer_badge.png"
+hash = "e357144421401f8b75bdd0477e54795f21519ff51c56c33fef3e5535e4182154"
+
+[[files]]
+file = "kubejs/assets/kubejs/textures/item/gold_explorer_badge.png"
+hash = "d9499aebab4e52229ba238315da400e75cd13a45a8c85cfae66c2bed6547bada"
+
+[[files]]
+file = "kubejs/assets/kubejs/textures/item/silver_explorer_badge.png"
+hash = "0901f4eaf5b1bac57e338a7737a5660be5adcb2291713b02e41873fbec790af0"
+
+[[files]]
+file = "kubejs/client_scripts/badge_info.js"
+hash = "1ab544e8cede6cfe38e62945c679bbce71cc1fdefe78d845244a77104aafb90e"
+
+[[files]]
+file = "kubejs/client_scripts/badge_tooltips.js"
+hash = "b018f7e28053d7773268871277315c8e9c9433a6636d73b4bce52f93cb286972"
+
+[[files]]
+file = "kubejs/data/awd/tags/worldgen/structure/fortress_or_stronghold.json"
+hash = "bfb7dab50211273a1b9fae02e74f1259bb80f1d4c92e148a91505d75d30dceeb"
+
+[[files]]
+file = "kubejs/server_scripts/badge_gates.js"
+hash = "a45a6d5305e571bb8bebcfe1222d1034f5d587f7666cefdf59d47fb96a9deca9"
+
+[[files]]
+file = "kubejs/server_scripts/quest_book.js"
+hash = "7c8da4aa326193d6b45658aa577124b0c41fcb8cd76e5ece5cb6ca85ff3555b0"
+
+[[files]]
+file = "kubejs/startup_scripts/badges.js"
+hash = "79001fe42b7c0a64c5c37922a7e1fb5f5c3042a76e5dfc9536cbaeb526c53b20"
+
+[[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "657a01a86bbf8617e4726c77df08f708e43a3db12db74b837eebd8eb1d93faae"
 metafile = true
@@ -72,6 +140,11 @@ metafile = true
 [[files]]
 file = "mods/connected-glass.pw.toml"
 hash = "ba633190e61bd7b32e412cb628a83fdd09b53b7ef8a036f1669687c719a99cc2"
+metafile = true
+
+[[files]]
+file = "mods/controlling.pw.toml"
+hash = "616036c38fafbcaf00c0720d947ec39f571d885a014f0c81b5eeeb4193784e0e"
 metafile = true
 
 [[files]]
@@ -230,6 +303,11 @@ hash = "0d7ce37fd00f170025118f0e3fbeef7f4e7147c332b1a5a4e924950eb5e36bc0"
 metafile = true
 
 [[files]]
+file = "mods/leaves-be-gone.pw.toml"
+hash = "76806236c79f5437953100c618c15aaba2c4e349e29d83113286bb808c687683"
+metafile = true
+
+[[files]]
 file = "mods/libipn.pw.toml"
 hash = "6fdc7f01fd9da8addbbd8ca0eb4c0465759a8ff85d20cb7f73bda7578fad5ab1"
 metafile = true
@@ -345,6 +423,11 @@ hash = "eab2f56ff9135b3b7253ea5a73deae2f887e2876f5f0432936044a6e926937b4"
 metafile = true
 
 [[files]]
+file = "mods/puzzles-lib.pw.toml"
+hash = "8469008b906929bf02ec5d18c26d9a646008fdd7a8c54e5dedfad44e0fcc4484"
+metafile = true
+
+[[files]]
 file = "mods/rechiseled-create.pw.toml"
 hash = "5117690c5af416704847834d5797e493206c30ba5e963a3e08123717834b29f3"
 metafile = true
@@ -377,6 +460,11 @@ metafile = true
 [[files]]
 file = "mods/sawmill.pw.toml"
 hash = "cafaa2269f67fcd14ff94d7409584153814465d51239f929d9eb56458b1b98b6"
+metafile = true
+
+[[files]]
+file = "mods/searchables.pw.toml"
+hash = "b210b54498abff891f524a0ce32b7b81bfc88043604065bd4ece9e71c36427f4"
 metafile = true
 
 [[files]]

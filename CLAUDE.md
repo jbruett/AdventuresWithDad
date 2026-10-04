@@ -22,7 +22,7 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
     `https://nightly.link/packwiz/packwiz/workflows/go/main/Windows%2064-bit.zip`, unzip it to
     `%LOCALAPPDATA%\Programs\packwiz\`, and add that folder to the user PATH.
   - **Add mods from CurseForge** (`packwiz -y curseforge add <slug>`), not Modrinth, because the pack publishes to CF.
-  - Mark client-only mods with `side = "client"` in their `.pw.toml` (Sodium, IPN/libIPN, Xaero's).
+  - Mark client-only mods with `side = "client"` in their `.pw.toml` (Sodium, IPN/libIPN, Xaero's, Controlling/Searchables).
   - `.packwizignore` keeps repo files (docs, README, etc.) out of the pack. `.gitattributes` forces LF because
     packwiz hashes files.
   - Test build: `packwiz curseforge export -o <zip>`, then import the zip into Prism Launcher.
@@ -39,6 +39,19 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
   - **Configs:** pack configs live in `config/` (included in the pack and used by both client and server). To change
     a setting, copy the generated file from a Prism instance, edit only the needed lines, and keep everything else
     at defaults so diffs stay readable. Then run `packwiz refresh`.
+  - **KubeJS 7 (2101.x):** scripts in `kubejs/{startup,server,client}_scripts/`. Check
+    `logs/kubejs/server.log` for "Added N recipes ... with 0 failed recipes". Shaped recipes fail if the key
+    defines a symbol the pattern doesn't use.
+  - **FTB Quests:** `config/ftbquests/quests/` (see docs/QUESTS.md). **Edits made in-game in a Prism instance
+    are saved to that instance's `config/ftbquests/`, not to the repo. Copy them back into the repo** before
+    committing. Server log line to check: "Loaded N chapter groups, N chapters, N quests".
+    Quest text must be in a single `lang/en_us.snbt`; check the client log for
+    "received translation table en_us (with N entries)", where N must not be 0.
+    Hand-made quest IDs must be 16 hex digits starting with 0–7 (positive longs). IDs starting with 8–F load,
+    but their text doesn't display.
+    **Never change existing quest/task/reward IDs** once anyone has played. Progress and reward claims are stored
+    by ID: a changed reward ID makes a completed quest's reward claimable again, and a changed quest ID resets it.
+    Edit quests in place (in-game editor or by hand); don't regenerate the files.
   - Prism instances (one per test batch): `%APPDATA%\PrismLauncher\instances\<name>\minecraft\logs\latest.log`.
     Read the log after each boot test. Expected noise: mixin "Error loading class" / refmap warnings for absent mods.
 - **KubeJS**: recipe, tag and loot balancing. **Configs / datapacks**: worldgen, spawns, difficulty.
@@ -63,4 +76,6 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
     catches this quickly: look for "Missing or unsupported mandatory dependencies" in the log.
   - Optional client-side libraries only show up in the **client** log, e.g. "Model loader 'athena:athena' not found".
     Check client logs for `Model loader .* not found` after adding mods.
-- Then work through the balancing backlog in docs/PLAN.md.
+- [x] Quests v1: Explorer badges, recipe gates, first-join quest book, and the Welcome (with JEI tutorial),
+  Builder's Corner, Explorer and Twilight Forest chapters (35 quests). Server loads cleanly. In-game test pending
+- Then: John's playthrough, which drives the balancing backlog in docs/PLAN.md and the tech chapters.

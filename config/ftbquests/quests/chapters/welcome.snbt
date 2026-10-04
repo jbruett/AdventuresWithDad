@@ -1,0 +1,118 @@
+{
+	autofocus_id: "66CCB3D29F8285A9"
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "welcome"
+	group: ""
+	icon: { id: "ftbquests:book" }
+	id: "4E2186FA03D180EE"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "ftbquests:book" }
+			id: "66CCB3D29F8285A9"
+			rewards: [{ count: 8, id: "5F45A1225903FC36", item: { count: 1, id: "minecraft:bread" }, type: "item" }]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{ id: "171FAE7822FA4636", type: "checkmark" }]
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["66CCB3D29F8285A9"]
+			icon: { id: "minecraft:knowledge_book" }
+			id: "448DE04AC65149E5"
+			tasks: [{ id: "65A5F5316C47B46F", type: "checkmark" }]
+			x: 2d
+			y: 0d
+		}
+		{
+			dependencies: ["448DE04AC65149E5"]
+			id: "27E9D37F2668A983"
+			rewards: [{ count: 16, id: "42E9BF25398F880E", item: { count: 1, id: "minecraft:torch" }, type: "item" }]
+			tasks: [{ id: "5143BF5CFE28839A", item: { count: 1, id: "minecraft:crafting_table" }, type: "item" }]
+			x: 4d
+			y: 0d
+		}
+		{
+			dependencies: ["27E9D37F2668A983"]
+			icon: { id: "minecraft:iron_ingot" }
+			id: "787A0A7495CD4513"
+			tasks: [{ id: "2AC704D5A307A25F", type: "checkmark" }]
+			x: 6d
+			y: 0d
+		}
+		{
+			dependencies: ["787A0A7495CD4513"]
+			id: "4C4519E96AA904F9"
+			tasks: [{ id: "286790561391E175", item: { count: 1, id: "waystones:waystone" }, type: "item" }]
+			x: 8d
+			y: 0d
+		}
+		{
+			dependencies: ["4C4519E96AA904F9"]
+			icon: { id: "minecraft:name_tag" }
+			id: "560AAE4E484F0148"
+			tasks: [{ id: "06A68615FF88DA5E", type: "checkmark" }]
+			x: 10d
+			y: 0d
+		}
+		{
+			dependencies: ["560AAE4E484F0148"]
+			icon: { id: "minecraft:writable_book" }
+			id: "3B8CC2959F7DDF88"
+			tasks: [{ id: "7452DCD6007BE20F", type: "checkmark" }]
+			x: 12d
+			y: 0d
+		}
+		{
+			dependencies: ["3B8CC2959F7DDF88"]
+			icon: { id: "minecraft:tripwire_hook" }
+			id: "7EA6759AC30E50FE"
+			tasks: [{ id: "08590B72BC4734AC", type: "checkmark" }]
+			x: 14d
+			y: 0d
+		}
+		{
+			dependencies: ["4C4519E96AA904F9"]
+			icon: { id: "minecraft:player_head" }
+			id: "63915700A0020382"
+			tasks: [{ id: "25451B961BC56D21", type: "checkmark" }]
+			x: 4d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4C4519E96AA904F9"]
+			id: "4BDA18EB3C8A04E8"
+			rewards: [{ count: 2, id: "60CE3D2B2E73C7AA", item: { count: 1, id: "sophisticatedbackpacks:upgrade_base" }, type: "item" }]
+			tasks: [{ id: "61C76D3620AFF975", item: { count: 1, id: "sophisticatedbackpacks:backpack" }, type: "item" }]
+			x: 6d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4C4519E96AA904F9"]
+			icon: { id: "waystones:waystone" }
+			id: "3E4AFF8AF2C99F5D"
+			rewards: [{ count: 4, id: "15CB5E548019D10F", item: { count: 1, id: "waystones:warp_scroll" }, type: "item" }]
+			tasks: [{ id: "1331F5BD096DDCF7", type: "checkmark" }]
+			x: 8d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4C4519E96AA904F9"]
+			id: "6241A3B7EFD6A10F"
+			tasks: [{ id: "00F856D94361B9E3", item: { count: 1, id: "torchmaster:megatorch" }, type: "item" }]
+			x: 10d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4C4519E96AA904F9"]
+			icon: { id: "minecraft:skeleton_skull" }
+			id: "5C858BF3C8BBDC20"
+			tasks: [{ id: "5FEAC29F466CB885", type: "checkmark" }]
+			x: 12d
+			y: 2.5d
+		}
+	]
+}

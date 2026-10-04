@@ -103,6 +103,8 @@ Status: ✅ confirmed NeoForge 1.21.1 build · 🔄 replaced · ❓ undecided ·
 | Sodium | ✅ | Client-only |
 | ModernFix, FerriteCore | ✅ | |
 | JEI | ✅ | Chosen over EMI |
+| Controlling (+ Searchables) | ✅ | Searchable key binds + conflict highlighting. Client-only |
+| Leaves Be Gone (+ Puzzles Lib) | ✅ | Fast leaf decay (John's request) |
 | Jade | ✅ | |
 | Xaero's Minimap + World Map | ✅ | Client-only-ish; waypoint sharing |
 | FTB Quests, FTB Chunks, FTB Teams | ✅ | CF-only. Chunks = claims + chunk loading |
@@ -131,7 +133,7 @@ playthrough get added here. Items below are things to watch for, not changes to 
 
 - [ ] Remove starter books → single FTB Quests book on first join
   - [x] Ars Nouveau Tattered Tome: `spawnBook = false` in config/ars_nouveau-common.toml (the only mod that gave one at batch 4)
-  - [ ] Give the FTB Quests book on first join once quests exist
+  - [x] Give the FTB Quests book on first join (kubejs/server_scripts/quest_book.js)
 - [ ] Ore-processing ladder: Create (~1.75x) → Ender IO (~2x) → Mekanism (3–5x); keep each tier worthwhile
 - [ ] Building Gadgets cheap and early (building is a core activity); gate Mining Gadgets to tier 3
 - [ ] Set server difficulty to Easy; review hostile spawn rates after first playtest
@@ -143,6 +145,8 @@ playthrough get added here. Items below are things to watch for, not changes to 
 - [ ] Recipe conflicts (multiple mods' sawmills, crushers, furnaces) — unify via KubeJS + tags
 - [ ] Create Deco's `createdeco:placard` recipe fails to parse against Create 6.0.10. Fix with KubeJS or wait for an update
 - [ ] Ender IO's 1.21.1 builds are tagged beta (8.2.12-beta). Watch for bugs during the playthrough
+- [ ] Playthrough check: R4 (craft a Waystone) unlocks five Welcome quests, and the Waystone recipe has some
+      advanced ingredients. See whether this blocks a new survival player too early
 - [ ] Track client-only mods for the server pack (Sodium, IPN, Xaero's, etc.)
 - [ ] FTB Chunks: per-player claim/forceload limits sized for a home server
 
@@ -163,4 +167,6 @@ playthrough get added here. Items below are things to watch for, not changes to 
 - 2026-10-04: Dedicated server test passes (scripts/test-server.ps1). All CF mods allow automated downloads
 - 2026-10-04: Batch 4 (tech/magic) added; Curios + GeckoLib added for Ars Nouveau. Server boots with 97 mods
 - 2026-10-04: Batch 4 client boots. Athena added (Ender IO capacitor bank models need it)
+- 2026-10-04: Quests: shared team progress, soft gates (badges from Explorer quests), Claude drafts and John tweaks,
+  specific-item rewards only. Design in docs/QUESTS.md
 - 2026-10-04: Balancing happens through John's own playthrough before release, not up-front tuning

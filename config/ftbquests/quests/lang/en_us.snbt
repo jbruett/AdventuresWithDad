@@ -1,0 +1,142 @@
+{
+	file.0000000000000001.title: "Adventures with Dad"
+	chapter.4E2186FA03D180EE.title: "Welcome"
+	chapter.32206751EEC8E543.title: "Builder's Corner"
+	chapter.7794C8F3D030AEE3.title: "Explorer"
+	chapter.72434645B0E62135.title: "Twilight Forest"
+	task.171FAE7822FA4636.title: "Click here to finish this quest"
+	quest.66CCB3D29F8285A9.title: "Welcome!"
+	quest.66CCB3D29F8285A9.quest_subtitle: "Start here"
+	quest.66CCB3D29F8285A9.quest_desc: ["Hi! This is your &6Quest Book&r.", "", "Quests give you ideas for what to do next, and &areward you&r for doing them. They are all optional, so play however you like!", "", "Click a quest to read it. When you finish one, click its &ereward&r to claim it."]
+	task.65A5F5316C47B46F.title: "I found the item list"
+	quest.448DE04AC65149E5.title: "The Magic Recipe List"
+	quest.448DE04AC65149E5.quest_subtitle: "Meet JEI"
+	quest.448DE04AC65149E5.quest_desc: ["Open your inventory with &eE&r.", "", "The list of items on the &eright side&r of the screen shows &6every item in the game&r, including everything the mods add!", "", "Scroll it with the &emouse wheel&r, or use the arrows at the top to change pages.", "", "Press &eCtrl+O&r to hide or show the list."]
+	quest.27E9D37F2668A983.title: "How Do I Make That?"
+	quest.27E9D37F2668A983.quest_subtitle: "Press R"
+	quest.27E9D37F2668A983.quest_desc: ["In your inventory, &ehover&r your mouse over any item in the list and press &eR&r (or &eleft-click&r it). This shows you how to &6make&r it.", "", "Press &eBackspace&r to go back a page, and &eEsc&r to close.", "", "In the recipe window, the little &e+&r button puts the items into your crafting grid for you, if you have them.", "", "Practice: look up the &6Crafting Table&r and make one!"]
+	task.2AC704D5A307A25F.title: "I tried it"
+	quest.787A0A7495CD4513.title: "What Can I Do With This?"
+	quest.787A0A7495CD4513.quest_subtitle: "Press U"
+	quest.787A0A7495CD4513.quest_desc: ["Hover over an item and press &eU&r (or &eright-click&r it) to see everything you can &6use it for&r.", "", "Try it on a piece of &ewood&r or an &eiron ingot&r. There are a LOT of uses in this pack!"]
+	quest.4C4519E96AA904F9.title: "Search Like a Pro"
+	quest.4C4519E96AA904F9.quest_subtitle: "Find anything"
+	quest.4C4519E96AA904F9.quest_desc: ["Click the &esearch box&r at the bottom of the list (or press &eCtrl+F&r) and type a name, like &awaystone&r.", "", "Type &e@&r and a mod name to only show that mod's items:", "  &a@macaw&r   &a@create&r   &a@ars&r", "", "You can mix them: &a@macaw roof&r shows only Macaw's roofs!", "", "&eDouble-click&r the search box to clear it.", "", "Practice: search for the &6Waystone&r, look up its recipe and make one. Keep it, you will need it soon!"]
+	task.06A68615FF88DA5E.title: "Got it"
+	quest.560AAE4E484F0148.title: "Which Mod Is This?"
+	quest.560AAE4E484F0148.quest_subtitle: "Blue text"
+	quest.560AAE4E484F0148.quest_desc: ["The &9blue text&r at the bottom of an item's tooltip tells you which mod it comes from.", "", "Look at a block in the world: the box at the top of your screen shows its name and its mod too.", "", "Use that name with &e@&r in the search box to see everything else the mod adds!"]
+	task.7452DCD6007BE20F.title: "Got it"
+	quest.3B8CC2959F7DDF88.title: "Bookmarks"
+	quest.3B8CC2959F7DDF88.quest_subtitle: "Press A"
+	quest.3B8CC2959F7DDF88.quest_desc: ["Hover over an item and press &eA&r to &6bookmark&r it. Bookmarks show up on the &eleft side&r of the screen.", "", "Great for things you are collecting materials for. Press &eA&r again to remove a bookmark."]
+	task.08590B72BC4734AC.title: "I found the search box"
+	quest.7EA6759AC30E50FE.title: "Find Any Key"
+	quest.7EA6759AC30E50FE.quest_subtitle: "Search your controls"
+	quest.7EA6759AC30E50FE.quest_desc: ["Forgot which key does something? Press &eEsc&r, then go to &eOptions > Controls > Key Binds&r.", "", "Type in the &esearch box&r at the top, like &aultimine&r or &abookmark&r, to find it.", "", "Keys shown in &cred&r are used by two things at once. Click one to change it!"]
+	task.25451B961BC56D21.title: "We are a team"
+	quest.63915700A0020382.title: "Team Up"
+	quest.63915700A0020382.quest_subtitle: "Play together"
+	quest.63915700A0020382.quest_desc: ["Join a &6team&r with Dad so your quests count for both of you!", "", "One person makes a party:", "  &a/ftbteams party create&r", "Then invites the other:", "  &a/ftbteams party invite <name>&r", "", "You can also use the &eteam button&r in the top-left corner of your inventory."]
+	quest.4BDA18EB3C8A04E8.title: "Pack Your Bags"
+	quest.4BDA18EB3C8A04E8.quest_subtitle: "More pockets"
+	quest.4BDA18EB3C8A04E8.quest_desc: ["A &6Backpack&r carries lots of extra items. Wear it on your back, or place it on the ground and open it.", "", "Later you can add &eupgrades&r to it, like auto-pickup!"]
+	task.1331F5BD096DDCF7.title: "Waystone placed at home"
+	quest.3E4AFF8AF2C99F5D.title: "Never Get Lost"
+	quest.3E4AFF8AF2C99F5D.quest_subtitle: "Maps and waystones"
+	quest.3E4AFF8AF2C99F5D.quest_desc: ["Press &eM&r to open the &6world map&r.", "", "Press &eB&r to add a &6waypoint&r so you can find your way back to a place.", "", "Place your &6Waystone&r at home and right-click it to give it a name. You can teleport between any waystones you have found, so you can visit each other's bases!"]
+	quest.6241A3B7EFD6A10F.title: "Safe Home"
+	quest.6241A3B7EFD6A10F.quest_subtitle: "No more monsters"
+	quest.6241A3B7EFD6A10F.quest_desc: ["The &6Mega Torch&r stops monsters from spawning in a big area around it.", "", "Put one at your base so it stays safe at night!"]
+	task.5FEAC29F466CB885.title: "Good to know"
+	quest.5C858BF3C8BBDC20.title: "Oops, I Died"
+	quest.5C858BF3C8BBDC20.quest_subtitle: "Gravestones"
+	quest.5C858BF3C8BBDC20.quest_desc: ["If you die, your items go into a &6gravestone&r where you died. They will not disappear!", "", "Go back to it and break it to get everything back. Your map shows where it is."]
+	quest.754E79B4D67454A1.title: "Builder's Toolkit"
+	quest.754E79B4D67454A1.quest_subtitle: "Build faster"
+	quest.754E79B4D67454A1.quest_desc: ["The &6Building Gadget&r places lots of blocks at once, in lines, walls and floors!", "", "It runs on power. Charge it in a &eCharging Station&r (here is one for you).", "", "Look up its controls with the tooltip, or in &eOptions > Controls&r."]
+	quest.30E571D60B5FC9CB.title: "Copy That"
+	quest.30E571D60B5FC9CB.quest_subtitle: "Copy and paste builds"
+	quest.30E571D60B5FC9CB.quest_desc: ["The &6Copy-Paste Gadget&r copies a whole build and pastes it somewhere else!", "", "Save your favourite builds in the &eTemplate Manager&r."]
+	task.48F012A763636357.title: "I tried it"
+	quest.4CAC69206C51F083.title: "Super Mining Hands"
+	quest.4CAC69206C51F083.quest_subtitle: "Break lots at once"
+	quest.4CAC69206C51F083.quest_desc: ["Hold the &e`&r key (top-left of your keyboard, under Esc) and break a block. All the matching blocks touching it break too!", "", "Great for chopping whole trees, digging out ore veins and clearing space to build."]
+	quest.0AFFF4E1D5F7C099.title: "A Roof Over Your Head"
+	quest.0AFFF4E1D5F7C099.quest_subtitle: "Macaw's Roofs"
+	quest.0AFFF4E1D5F7C099.quest_desc: ["&6Macaw's Roofs&r has roofs in every kind of wood and stone.", "", "Search &a@macaw roof&r to see them all!"]
+	task.1BCE1633B1B8978F.title: "My room is furnished"
+	quest.34176116F87210E4.title: "Home Sweet Home"
+	quest.34176116F87210E4.quest_subtitle: "Furniture"
+	quest.34176116F87210E4.quest_desc: ["Make a room with a &6bed&r, a &6table&r and &6chairs&r.", "", "Try &a@macaw&r and &a@handcrafted&r for lots of furniture!"]
+	quest.4AFDEF60E7AACD96.title: "Window Shopping"
+	quest.4AFDEF60E7AACD96.quest_subtitle: "Connected Glass"
+	quest.4AFDEF60E7AACD96.quest_desc: ["&6Clear glass&r joins up into big smooth windows with no lines in between."]
+	quest.054D79276706E090.title: "Chisel Time"
+	quest.054D79276706E090.quest_subtitle: "New block styles"
+	quest.054D79276706E090.quest_desc: ["The &6Chisel&r turns blocks into fancy new styles. Right-click with it to open it, put blocks in, and pick a style!"]
+	quest.25A7D5CDD1BFFCF0.title: "Shape Shifter"
+	quest.25A7D5CDD1BFFCF0.quest_subtitle: "FramedBlocks"
+	quest.25A7D5CDD1BFFCF0.quest_desc: ["The &6Framing Saw&r makes &eframed blocks&r: shapes like slopes, pillars and corners.", "", "Right-click a framed block with any other block to make it look like that block!"]
+	quest.3A62990C4F1F6D2F.title: "Bridge Builder"
+	quest.3A62990C4F1F6D2F.quest_subtitle: "Macaw's Bridges"
+	quest.3A62990C4F1F6D2F.quest_desc: ["Build a bridge over a river or a gap! Search &a@macaw bridge&r for lots of styles."]
+	task.3F8016B8D8A78646.title: "Dad has seen it"
+	quest.675F7B200D453A2D.title: "Master Builder"
+	quest.675F7B200D453A2D.quest_subtitle: "Show Dad!"
+	quest.675F7B200D453A2D.quest_desc: ["Build something you are really proud of...", "", "...and show it to Dad!"]
+	task.43F4CEBAF733071E.title: "Visit a forest"
+	task.694D521495B04485.title: "Visit a mountain"
+	task.2037320B1AE1C810.title: "Visit a beach"
+	quest.30B648B18A345220.title: "Into the Wild"
+	quest.30B648B18A345220.quest_subtitle: "Visit new places"
+	quest.30B648B18A345220.quest_desc: ["Go exploring! Find a &6forest&r, a &6mountain&r and a &6beach&r."]
+	task.30505100A4971C52.title: "Visit a village"
+	quest.3BC54BDA630C9A12.title: "Village People"
+	quest.3BC54BDA630C9A12.quest_subtitle: "Towns and Towers"
+	quest.3BC54BDA630C9A12.quest_desc: ["Find a &6village&r. There are lots of different kinds to discover!"]
+	task.4D5FC6E1AE51FCCA.title: "Visit a dungeon"
+	quest.7B5829C230694D09.title: "Dungeon Delver"
+	quest.7B5829C230694D09.quest_subtitle: "Underground dungeons"
+	quest.7B5829C230694D09.quest_desc: ["Find a &6dungeon&r hidden underground. Watch out for monsters!"]
+	task.101D2AE8119FB6B2.title: "Visit a tavern"
+	quest.719741E06CF69F1A.title: "Tavern Time"
+	quest.719741E06CF69F1A.quest_subtitle: "A place to rest"
+	quest.719741E06CF69F1A.quest_desc: ["Find a &6tavern&r. Travellers stop here for food and a rest."]
+	task.103CC3626FF3A163.title: "Visit a mineshaft"
+	quest.16DAC029693288C3.title: "Deep Down"
+	quest.16DAC029693288C3.quest_subtitle: "Old mineshafts"
+	quest.16DAC029693288C3.quest_desc: ["Find an old &6mineshaft&r. Bring torches, it is dark down there!"]
+	task.0CCC900956AE7D36.title: "Claim your badge"
+	quest.3A05B3BAF1ECEF67.title: "Bronze Explorer Badge"
+	quest.3A05B3BAF1ECEF67.quest_subtitle: "Finish any 3 of the 4"
+	quest.3A05B3BAF1ECEF67.quest_desc: ["Explore &6any 3&r of these: a village, a dungeon, a tavern or a mineshaft.", "", "The &6Bronze Explorer Badge&r unlocks new machines. It goes back into your inventory after crafting, so you only ever need one!"]
+	task.63F0523D050222FD.title: "Enter the Nether"
+	quest.12AEEB9094724BA5.title: "Hot Stuff"
+	quest.12AEEB9094724BA5.quest_subtitle: "The Nether"
+	quest.12AEEB9094724BA5.quest_desc: ["Build a &6Nether Portal&r and go through. It is hot and dangerous, so go with Dad!"]
+	task.023B426DE9B0B235.title: "Visit a fortress or stronghold"
+	quest.3B40992B0B08F547.title: "Fortress Raider"
+	quest.3B40992B0B08F547.quest_subtitle: "Fortress or stronghold"
+	quest.3B40992B0B08F547.quest_desc: ["Find a &6Nether Fortress&r, or a &6Stronghold&r back in the Overworld."]
+	task.5DEAF7795CBDB837.title: "Claim your badge"
+	quest.3DAD468E890550F4.title: "Silver Explorer Badge"
+	quest.3DAD468E890550F4.quest_subtitle: "Brave explorer"
+	quest.3DAD468E890550F4.quest_desc: ["You braved the Nether! The &6Silver Explorer Badge&r unlocks even bigger machines."]
+	task.06652A581444B62C.title: "Enter The End"
+	quest.035EE7E525E0A2B4.title: "The End?"
+	quest.035EE7E525E0A2B4.quest_subtitle: "Gold Explorer Badge"
+	quest.035EE7E525E0A2B4.quest_desc: ["Find a &6Stronghold&r and its &6End Portal&r, and step into &5The End&r.", "", "You will earn the &6Gold Explorer Badge&r!"]
+	task.4E04E6842796C228.title: "Enter the Twilight Forest"
+	quest.0D6684BC31771093.title: "A Magic Portal"
+	quest.0D6684BC31771093.quest_subtitle: "Optional adventure"
+	quest.0D6684BC31771093.quest_desc: ["Dig a 2x2 hole, fill it with &bwater&r, put &eflowers&r around it, then throw in a &bdiamond&r...", "", "Welcome to the &2Twilight Forest&r! Its bosses are tough, so this chapter is a Dad-and-son adventure. Beating them gives a shortcut to the Explorer Badges."]
+	task.1F61D06E7C70D3C0.title: "Defeat the Naga"
+	quest.2D967E0E04A66FC4.title: "The Naga"
+	quest.2D967E0E04A66FC4.quest_subtitle: "Boss"
+	quest.2D967E0E04A66FC4.quest_desc: ["A giant snake lives in a stone courtyard. Defeat it for a &6Bronze Explorer Badge&r!"]
+	task.630AAA579E5314E6.title: "Defeat the Lich"
+	quest.0A74A47C87C75841.title: "The Lich"
+	quest.0A74A47C87C75841.quest_subtitle: "Boss"
+	quest.0A74A47C87C75841.quest_desc: ["An evil wizard lives at the top of a tall tower. Defeat him for a &6Silver Explorer Badge&r!"]
+}

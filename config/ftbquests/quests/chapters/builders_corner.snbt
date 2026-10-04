@@ -1,0 +1,91 @@
+{
+	autofocus_id: "754E79B4D67454A1"
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "builders_corner"
+	group: ""
+	icon: { id: "buildinggadgets2:gadget_building" }
+	id: "32206751EEC8E543"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "754E79B4D67454A1"
+			rewards: [{ id: "37618BA02884A3B9", item: { count: 1, id: "charginggadgets:charging_station" }, type: "item" }]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{ id: "766A16B825C02302", item: { count: 1, id: "buildinggadgets2:gadget_building" }, type: "item" }]
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["754E79B4D67454A1"]
+			id: "30E571D60B5FC9CB"
+			rewards: [{ id: "5CB412F3787ABAEB", item: { count: 1, id: "buildinggadgets2:template_manager" }, type: "item" }]
+			tasks: [{ id: "6917BF37259D6E5A", item: { count: 1, id: "buildinggadgets2:gadget_copy_paste" }, type: "item" }]
+			x: 2.5d
+			y: 0d
+		}
+		{
+			icon: { id: "minecraft:iron_pickaxe" }
+			id: "4CAC69206C51F083"
+			tasks: [{ id: "48F012A763636357", type: "checkmark" }]
+			x: 0d
+			y: 2.5d
+		}
+		{
+			id: "0AFFF4E1D5F7C099"
+			rewards: [{ count: 64, id: "20628A253DA1C29C", item: { count: 1, id: "minecraft:stone_bricks" }, type: "item" }]
+			tasks: [{ count: 16L, id: "55A7A99774F0CB24", item: { count: 1, id: "mcwroofs:oak_roof" }, type: "item" }]
+			x: 5d
+			y: 0d
+		}
+		{
+			icon: { id: "minecraft:red_bed" }
+			id: "34176116F87210E4"
+			rewards: [{ count: 4, id: "4A75F02E10E3CF2C", item: { count: 1, id: "mcwlights:white_ceiling_light" }, type: "item" }]
+			tasks: [{ id: "1BCE1633B1B8978F", type: "checkmark" }]
+			x: 7d
+			y: 0d
+		}
+		{
+			id: "4AFDEF60E7AACD96"
+			rewards: [{ count: 32, id: "28F5E38637C8E723", item: { count: 1, id: "connectedglass:clear_glass" }, type: "item" }]
+			tasks: [{ count: 16L, id: "0939E6A37CB2E4E4", item: { count: 1, id: "connectedglass:clear_glass" }, type: "item" }]
+			x: 9d
+			y: 0d
+		}
+		{
+			id: "054D79276706E090"
+			rewards: [{ count: 64, id: "5E0C29EDAD3996C8", item: { count: 1, id: "minecraft:stone_bricks" }, type: "item" }]
+			tasks: [{ id: "06AC38E49F7041D4", item: { count: 1, id: "rechiseled:chisel" }, type: "item" }]
+			x: 5d
+			y: 2.5d
+		}
+		{
+			id: "25A7D5CDD1BFFCF0"
+			rewards: [{ count: 16, id: "189C133F9D5237D9", item: { count: 1, id: "framedblocks:framed_cube" }, type: "item" }]
+			tasks: [{ id: "2F9EFDBD735F0D5C", item: { count: 1, id: "framedblocks:framing_saw" }, type: "item" }]
+			x: 7d
+			y: 2.5d
+		}
+		{
+			id: "3A62990C4F1F6D2F"
+			rewards: [{ count: 8, id: "657FCFED816E49C2", item: { count: 1, id: "minecraft:lantern" }, type: "item" }]
+			tasks: [{ count: 4L, id: "5E9B2C0CDDE72FA9", item: { count: 1, id: "mcwbridges:oak_log_bridge_middle" }, type: "item" }]
+			x: 9d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0AFFF4E1D5F7C099", "34176116F87210E4", "4AFDEF60E7AACD96"]
+			icon: { id: "minecraft:diamond" }
+			id: "675F7B200D453A2D"
+			rewards: [{ count: 4, id: "54BE7741216CDB2E", item: { count: 1, id: "supplementaries:confetti_popper" }, type: "item" }, { count: 16, id: "3AF4D355F1B48C96", item: { count: 1, id: "minecraft:firework_rocket" }, type: "item" }]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{ id: "3F8016B8D8A78646", type: "checkmark" }]
+			x: 12d
+			y: 1.25d
+		}
+	]
+}
