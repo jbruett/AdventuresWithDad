@@ -105,6 +105,9 @@ Status: ✅ confirmed NeoForge 1.21.1 build · 🔄 replaced · ❓ undecided ·
 | JEI | ✅ | Chosen over EMI |
 | Controlling (+ Searchables) | ✅ | Searchable key binds + conflict highlighting. Client-only |
 | Leaves Be Gone (+ Puzzles Lib) | ✅ | Fast leaf decay (John's request) |
+| JEI / REI / EMI WorldGen | ✅ | Ore generation pages in JEI, read from biome data (no scan). Client + server |
+| Just Enough Resources (JER) | ❌ | Removed: its world-gen scan (`/jer_profile`) isn't implemented on 1.21.1, so no ore data |
+| MezzConfigGUI | ✅ | In-game config screens for MezzConfig mods (JEI). Client-only (John's request) |
 | Jade | ✅ | |
 | Xaero's Minimap + World Map | ✅ | Client-only-ish; waypoint sharing |
 | FTB Quests, FTB Chunks, FTB Teams | ✅ | CF-only. Chunks = claims + chunk loading |

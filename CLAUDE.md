@@ -22,10 +22,17 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
     `https://nightly.link/packwiz/packwiz/workflows/go/main/Windows%2064-bit.zip`, unzip it to
     `%LOCALAPPDATA%\Programs\packwiz\`, and add that folder to the user PATH.
   - **Add mods from CurseForge** (`packwiz -y curseforge add <slug>`), not Modrinth, because the pack publishes to CF.
-  - Mark client-only mods with `side = "client"` in their `.pw.toml` (Sodium, IPN/libIPN, Xaero's, Controlling/Searchables).
+  - Mark client-only mods with `side = "client"` in their `.pw.toml` (Sodium, IPN/libIPN, Xaero's, Controlling/Searchables, MezzConfigGUI).
   - `.packwizignore` keeps repo files (docs, README, etc.) out of the pack. `.gitattributes` forces LF because
     packwiz hashes files.
-  - Test build: `packwiz curseforge export -o <zip>`, then import the zip into Prism Launcher.
+  - **Dev test instance (preferred):** Prism instance `AdventuresWithDad-0.1.0-quests3` (John's test world:
+    `QuestTest`) syncs itself from the repo on every launch. Its pre-launch command is
+    `"$INST_JAVA" -jar packwiz-installer-bootstrap.jar http://localhost:8080/pack.toml` (jar in the instance's
+    `minecraft/` folder; `ManagedPack=false`). **`packwiz serve` must be running in the repo** whenever John
+    launches it; run it in the background at the start of a session. Worlds/options are never touched, and pack
+    configs are overwritten when they change in the repo. A NeoForge version bump in pack.toml must also be
+    changed in the instance's Prism settings. Backups: `%USERPROFILE%\AdventuresWithDad-backups\`.
+  - Fresh test build: `packwiz curseforge export -o <zip>`, then import the zip into Prism Launcher.
   - **Check that each jar is a NeoForge build.** Some authors (e.g. YUNG's) keep separate "(NeoForge)" CF listings,
     and their combined "Forge/NeoForge" listings serve Forge jars for 1.21.1, which NeoForge won't load. Use the
     `-neoforge` slugs. Quick check: `grep -h '^filename' mods/*.pw.toml | grep -i forge | grep -vi neoforge`.

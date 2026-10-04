@@ -278,6 +278,11 @@ hash = "4b0a995f7cfa19951ba585aa320a1f4ef1a755a38b608adcff2f9ddd156b195b"
 metafile = true
 
 [[files]]
+file = "mods/jei-worldgen.pw.toml"
+hash = "fef5aacc59e4d71092a090ce08be1a13ccd568fdb7acd0bb94bcf76701b1d8b7"
+metafile = true
+
+[[files]]
 file = "mods/jei.pw.toml"
 hash = "dff78a2bb35aed61cf73edaf1913c1fafec2a3a50551e022648c658cc21e32f9"
 metafile = true
@@ -395,6 +400,11 @@ metafile = true
 [[files]]
 file = "mods/mezzconfig.pw.toml"
 hash = "7cc4b699a816b1dcee290ceb5951f404079edfefd0dd844955056fbf93b82629"
+metafile = true
+
+[[files]]
+file = "mods/mezzconfiggui.pw.toml"
+hash = "cbca8b859fa971b0c7231a06ce24576207a1a9ed5135502d890e5f6d232cc199"
 metafile = true
 
 [[files]]
