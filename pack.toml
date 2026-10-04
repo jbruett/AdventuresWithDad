@@ -1,0 +1,13 @@
+name = "Adventures with Dad"
+author = "John Bruett"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "446192714d06dc7e14722f01c27f753722b03bbb4a62e38ed0332b6b9cd49e82"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.255"

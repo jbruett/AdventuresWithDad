@@ -1,0 +1,5 @@
+# packwiz stores file hashes; keep line endings stable across machines
+* text=auto eol=lf
+*.jar binary
+*.png binary
+*.zip binary

@@ -11,8 +11,33 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
 - John has 15 years of modded Minecraft experience (automation packs: Direwolf20, ATM, skyblocks) but is new to
   pack development. Explain pack-dev mechanics (packwiz, configs, KubeJS); no need to explain how tech mods play.
 
-## Planned tooling
-- **packwiz**: mod metadata as `.pw.toml` files in git; export to CurseForge zip + server pack.
+## Working rules
+- **Mods John explicitly picked are fixed.** Ask before replacing, removing, or proposing a competitor to any of
+  them. Suggestions are fine; changes to the pack wait for his confirmation. His picks are the
+  "Tech / automation (John's picks)" table in docs/PLAN.md.
+
+## Tooling
+- **packwiz**: mod metadata as `mods/*.pw.toml` in git; the pack lives in the repo root (`pack.toml`, `index.toml`).
+  - No official release builds. On Windows, install from the CI build at
+    `https://nightly.link/packwiz/packwiz/workflows/go/main/Windows%2064-bit.zip`, unzip it to
+    `%LOCALAPPDATA%\Programs\packwiz\`, and add that folder to the user PATH.
+  - **Add mods from CurseForge** (`packwiz -y curseforge add <slug>`), not Modrinth, because the pack publishes to CF.
+  - Mark client-only mods with `side = "client"` in their `.pw.toml` (Sodium, IPN/libIPN, Xaero's).
+  - `.packwizignore` keeps repo files (docs, README, etc.) out of the pack. `.gitattributes` forces LF because
+    packwiz hashes files.
+  - Test build: `packwiz curseforge export -o <zip>`, then import the zip into Prism Launcher.
+  - **Check that each jar is a NeoForge build.** Some authors (e.g. YUNG's) keep separate "(NeoForge)" CF listings,
+    and their combined "Forge/NeoForge" listings serve Forge jars for 1.21.1, which NeoForge won't load. Use the
+    `-neoforge` slugs. Quick check: `grep -h '^filename' mods/*.pw.toml | grep -i forge | grep -vi neoforge`.
+  - If a slug isn't found, search by name: `packwiz curseforge add "Mod Name"`. With `-y` it auto-picks the first
+    result, which can be the wrong loader.
+  - **Server test:** `pwsh scripts/test-server.ps1 [-AcceptEula] [-Start]` builds or updates a dedicated server at
+    `%USERPROFILE%\AdventuresWithDad-server`. It installs NeoForge plus server-side mods via `packwiz serve` and
+    packwiz-installer. John has accepted the EULA on this machine; a new machine needs `-AcceptEula` once. For
+    automated runs, launch `java @user_jvm_args.txt @libraries/.../win_args.txt nogui` with redirected stdin and
+    send `stop`; wrapping `run.bat` in `cmd /c` exits immediately.
+  - Prism instances (one per test batch): `%APPDATA%\PrismLauncher\instances\<name>\minecraft\logs\latest.log`.
+    Read the log after each boot test. Expected noise: mixin "Error loading class" / refmap warnings for absent mods.
 - **KubeJS**: recipe, tag and loot balancing. **Configs / datapacks**: worldgen, spawns, difficulty.
 - **FTB Quests**: progression guide that replaces the per-mod starter books.
 - Test locally in Prism Launcher.
@@ -21,7 +46,12 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
 - Dev machine was Windows; Python wasn't installed. Modrinth's API (api.modrinth.com) works from PowerShell
   `Invoke-RestMethod`. CurseForge blocks scripted requests (403), so check CF-only mods with web search.
 
-## Next session
-1. Install packwiz and initialize the pack (NeoForge 1.21.1) in this repo.
-2. Add mods in batches (foundation/performance → building → adventure → tech/magic), checking that each batch boots.
-3. Start the balancing backlog in docs/PLAN.md.
+## Progress
+- Pack initialized: NeoForge 21.1.255, pack version 0.1.0.
+- Mods go in batches, with a boot test after each: foundation → building → adventure → tech/magic.
+  - [x] Batch 1, foundation: boots cleanly
+  - [x] Batch 2, building (plus tier-0 tools: Building/Charging Gadgets, FTB Ultimine, Connected Glass): boots
+    cleanly. Baseline: game start 24.5s, world open 8.9s
+  - [x] Batch 3, adventure: boots in singleplayer (start 31.4s, world 11.5s) and on the dedicated server (65 mods). Multiplayer join from Prism works
+  - [ ] Batch 4, tech/magic (also brings in Create's building add-ons: Create Deco, Copycats+, Rechiseled: Create)
+- Then work through the balancing backlog in docs/PLAN.md.

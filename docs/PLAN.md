@@ -92,7 +92,7 @@ Status: ✅ confirmed NeoForge 1.21.1 build · 🔄 replaced · ❓ undecided ·
 | FramedBlocks | ✅ | Shapes that take any block's texture |
 | Create Deco, Create: Copycats+ | ✅ | Industrial building blocks for Create builds |
 | Supplementaries | ✅ | (listed above) |
-| Effortless Building | ❓ | Creative-like mirror/array placement; overlaps with Building Gadgets, so try both |
+| Effortless Building | ❌ | Removed. Building Gadgets (John's pick) covers this |
 | Chipped, Another Furniture, Dramatic Doors | ❌ | Not needed; the picks above cover them |
 | Blueprint / Abnormals mods | ❌ | Decided against |
 
@@ -126,12 +126,17 @@ boss drops give an optional **cheaper recipe or shortcut** for a tier, never the
 
 ## Balancing backlog
 
+**Approach:** John does a full playthrough before the pack goes to his son. Balance issues found in that
+playthrough get added here. Items below are things to watch for, not changes to make blind.
+
 - [ ] Remove starter books (Ars tome, others) → single FTB Quests book on first join
 - [ ] Ore-processing ladder: Create (~1.75x) → Ender IO (~2x) → Mekanism (3–5x); keep each tier worthwhile
 - [ ] Building Gadgets cheap and early (building is a core activity); gate Mining Gadgets to tier 3
 - [ ] Set server difficulty to Easy; review hostile spawn rates after first playtest
 - [ ] Botany Pots/Trees recipe cost (infinite resources)
-- [ ] Structure density: T&T + YUNG's + Repurposed Structures + D&T can over-saturate — tune spacing
+- [ ] Structure density: T&T + YUNG's + Repurposed Structures + D&T can over-saturate. First look (batch 3) seemed fine;
+      revisit during the playthrough
+- [ ] Villages: T&T and Repurposed Structures both add village variants. Consider turning off RS villages so T&T's are the ones you see
 - [ ] Mob difficulty / dungeon loot so day-one loot isn't late-game gear
 - [ ] Recipe conflicts (multiple mods' sawmills, crushers, furnaces) — unify via KubeJS + tags
 - [ ] Track client-only mods for the server pack (Sodium, IPN, Xaero's, etc.)
@@ -140,7 +145,6 @@ boss drops give an optional **cheaper recipe or shortcut** for a tier, never the
 ## Open questions
 
 - Target pack size. The current list is roughly 100–120 mods including libraries; that's fine for a home server
-- Effortless Building: keep or drop after trying Building Gadgets
 - How pick-up-and-play should Twilight Forest be (spawn rates, boss difficulty config)?
 
 ## Decisions log
@@ -149,3 +153,8 @@ boss drops give an optional **cheaper recipe or shortcut** for a tier, never the
 - 2026-10-03: Pedestals dropped (no 1.21.1 port); Inventory Tweaks → Inventory Profiles Next
 - 2026-10-03: Son likes building and usually plays creative, so building is a core pillar and heavy combat is optional
 - 2026-10-03: JEI, Gravestone Mod; no Aether; no Blueprint/Abnormals
+- 2026-10-04: packwiz initialized (NeoForge 21.1.255). All mods sourced from CurseForge. Batch 1 (foundation) boots
+- 2026-10-04: Batch 2 (building) added. Effortless Building removed (Building Gadgets stays). Create-dependent building add-ons wait for batch 4
+- 2026-10-04: Batch 3 (adventure) added. YUNG's taken from its NeoForge-specific CF listings. Boots; structure spacing looks OK
+- 2026-10-04: Dedicated server test passes (scripts/test-server.ps1). All CF mods allow automated downloads
+- 2026-10-04: Balancing happens through John's own playthrough before release, not up-front tuning
