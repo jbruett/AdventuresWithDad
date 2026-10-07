@@ -1,0 +1,94 @@
+name: Release
+
+# Manually triggered from the Actions tab: builds the CurseForge client zip and a
+# server starter zip, and publishes both as a GitHub release tagged
+# v<version>, where <version> comes from pack.toml. Bump the version in pack.toml
+# (and run packwiz refresh) first.
+on:
+  workflow_dispatch:
+    inputs:
+      prerelease:
+        description: Mark the release as a pre-release
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: false
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Read pack version
+        id: pack
+        run: |
+          version=$(sed -n 's/^version = "\(.*\)"$/\1/p' pack.toml)
+          neoforge=$(sed -n 's/^neoforge = "\(.*\)"$/\1/p' pack.toml)
+          [ -n "$version" ] && [ -n "$neoforge" ] || { echo "::error::Couldn't read version/neoforge from pack.toml"; exit 1; }
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "neoforge=$neoforge" >> "$GITHUB_OUTPUT"
+          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+          echo "client_zip=AdventuresWithDad-$version.zip" >> "$GITHUB_OUTPUT"
+          echo "server_zip=AdventuresWithDad-$version-server.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Check the tag is new
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "${{ steps.pack.outputs.tag }}" >/dev/null 2>&1; then
+            echo "::error::Release ${{ steps.pack.outputs.tag }} already exists. Bump the version in pack.toml."
+            exit 1
+          fi
+
+      - name: Check index.toml is up to date
+        run: |
+          packwiz refresh
+          if ! git diff --exit-code; then
+            echo "::error::index.toml is stale. Run 'packwiz refresh' and commit."
+            exit 1
+          fi
+
+      - name: Export CurseForge zip
+        run: packwiz curseforge export -o "${{ steps.pack.outputs.client_zip }}"
+
+      # The server zip holds no mod jars (we don't re-host other authors' files).
+      # The start scripts install NeoForge on first run, then on every start run
+      # packwiz-installer against this release's pack.toml on GitHub, which
+      # downloads the server-side mods from CurseForge and syncs configs.
+      - name: Build server zip
+        env:
+          PACK_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ steps.pack.outputs.tag }}/pack.toml
+        run: |
+          mkdir build-server && cd build-server
+          curl -fsSLo packwiz-installer-bootstrap.jar \
+            https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar
+
+          cp ../server/server.properties .
+          for f in start.sh start.bat; do
+            sed -e "s|@NEOFORGE_VERSION@|${{ steps.pack.outputs.neoforge }}|" -e "s|@PACK_URL@|$PACK_URL|" "../server/$f" > "$f"
+          done
+          chmod +x start.sh
+
+          zip -qr "../${{ steps.pack.outputs.server_zip }}" .
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ steps.pack.outputs.tag }}" \
+            "${{ steps.pack.outputs.client_zip }}" \
+            "${{ steps.pack.outputs.server_zip }}" \
+            --target "$GITHUB_SHA" \
+            --title "Adventures with Dad ${{ steps.pack.outputs.version }}" \
+            --generate-notes \
+            ${{ inputs.prerelease && '--prerelease' || '' }}

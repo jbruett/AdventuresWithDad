@@ -26,9 +26,8 @@ A Minecraft modpack for John to play with his ~10-year-old son on a dedicated se
   - `.packwizignore` keeps repo files (docs, README, `.github/`, `server/`, etc.) out of the pack. `.gitattributes`
     forces LF because packwiz hashes files (except `*.bat`, which stays CRLF so cmd parses it correctly).
   - **Releases:** `.github/workflows/release.yml` (manual dispatch) publishes a GitHub release `v<pack.toml
-    version>` with the CF client zip and a server zip. The server zip holds no mod jars (no re-hosting):
-    `server/start.{sh,bat}` install NeoForge on first run and, on every start, run packwiz-installer against
-    the release tag's raw `pack.toml` on GitHub (repo is public) to sync server-side mods and configs.
+    version>` with the CF client zip and a server zip. The server zip holds the server-side mods (installed by
+    packwiz-installer in CI), configs, and `server/start.{sh,bat}`, which install NeoForge on first run.
     Bump the version and run `packwiz refresh` before dispatching.
   - **Dev test instance (preferred):** Prism instance `AdventuresWithDad-0.1.0-quests3` (John's test world:
     `QuestTest`) syncs itself from the repo on every launch. Its pre-launch command is

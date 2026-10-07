@@ -174,5 +174,4 @@ playthrough get added here. Items below are things to watch for, not changes to 
   specific-item rewards only. Design in docs/QUESTS.md
 - 2026-10-04: Balancing happens through John's own playthrough before release, not up-front tuning
 - 2026-10-06: Releases are built by a manually dispatched GitHub Actions workflow: CF client zip + server zip
-  (start scripts that install NeoForge and sync mods/configs via packwiz-installer from the release tag;
-  no mod jars re-hosted; Easy difficulty preset)
+  (server-side mods, configs, start scripts that install NeoForge on first run; Easy difficulty preset)
